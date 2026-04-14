@@ -2,6 +2,8 @@
 
 Claude Code 상태줄(`~/.claude/statusline.json`)을 드래그&드롭으로 조합하는 웹 UI.
 
+![screenshot](screenshot.png)
+
 ---
 
 ## 실행
