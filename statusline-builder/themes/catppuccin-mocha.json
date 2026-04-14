@@ -1,0 +1,18 @@
+{
+  "name": "Catppuccin Mocha",
+  "description": "Soft pastel modern dark — mauve, peach, teal",
+  "colors": {
+    "user":           { "bg": "#cba6f7", "fg": "#1e1e2e" },
+    "folder":         { "bg": "#fab387", "fg": "#1e1e2e" },
+    "git":            { "bg": "#a6e3a1", "fg": "#1e1e2e" },
+    "elapsed":        { "bg": "#89dceb", "fg": "#1e1e2e" },
+    "model":          { "bg": "#313244", "fg": "#cdd6f4" },
+    "session-time":   { "bg": "#45475a", "fg": "#cdd6f4" },
+    "question-count": { "bg": "#585b70", "fg": "#cdd6f4" },
+    "session-name":   { "bg": "#cba6f7", "fg": "#1e1e2e" },
+    "agent":          { "bg": "#a6e3a1", "fg": "#1e1e2e" },
+    "vim-mode":       { "bg": "#f38ba8", "fg": "#1e1e2e" },
+    "worktree":       { "bg": "#89dceb", "fg": "#1e1e2e" },
+    "output-style":   { "bg": "#f5c2e7", "fg": "#1e1e2e" }
+  }
+}

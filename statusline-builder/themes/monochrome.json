@@ -1,0 +1,18 @@
+{
+  "name": "Monochrome",
+  "description": "Pure grayscale — no color, just contrast",
+  "colors": {
+    "user":           { "bg": "#1a1a1a", "fg": "#e8e8e8" },
+    "folder":         { "bg": "#2c2c2c", "fg": "#e8e8e8" },
+    "git":            { "bg": "#3e3e3e", "fg": "#e8e8e8" },
+    "elapsed":        { "bg": "#505050", "fg": "#e8e8e8" },
+    "model":          { "bg": "#1a1a1a", "fg": "#e8e8e8" },
+    "session-time":   { "bg": "#2c2c2c", "fg": "#e8e8e8" },
+    "question-count": { "bg": "#3e3e3e", "fg": "#e8e8e8" },
+    "session-name":   { "bg": "#505050", "fg": "#e8e8e8" },
+    "agent":          { "bg": "#2c2c2c", "fg": "#e8e8e8" },
+    "vim-mode":       { "bg": "#3e3e3e", "fg": "#e8e8e8" },
+    "worktree":       { "bg": "#1a1a1a", "fg": "#e8e8e8" },
+    "output-style":   { "bg": "#2c2c2c", "fg": "#e8e8e8" }
+  }
+}

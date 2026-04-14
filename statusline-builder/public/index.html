@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Statusline Builder</title>
+  <link rel="stylesheet" href="/public/builder.css">
+</head>
+<body>
+  <header>
+    <strong>Statusline Builder</strong>
+    <span id="save-indicator" class="dim">●</span>
+    <span class="dim">~/.claude/statusline.json</span>
+    <div id="theme-controls">
+      <label class="dim" for="theme-select">Theme</label>
+      <select id="theme-select"><option value="">—</option></select>
+      <button id="theme-save"   type="button">Save</button>
+      <button id="theme-export" type="button">Export</button>
+      <button id="theme-import" type="button">Import</button>
+      <input id="theme-import-file" type="file" accept="application/json,.json" hidden>
+    </div>
+  </header>
+
+  <main>
+    <aside id="palette">
+      <div class="label">Elements</div>
+      <div id="palette-groups"></div>
+    </aside>
+
+    <section id="middle">
+      <section id="preview">
+        <div class="label">Live preview</div>
+        <pre id="preview-body">loading…</pre>
+      </section>
+      <section id="canvas">
+        <div id="lines-container"></div>
+        <button id="add-line">+ add line</button>
+      </section>
+    </section>
+
+    <aside id="inspector">
+      <div class="label">Inspector</div>
+      <div id="inspector-body" class="dim">Click an element to edit it</div>
+    </aside>
+  </main>
+
+  <script src="/public/builder.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+:root {
+  --bg: #0e0e0e;
+  --bg-alt: #1a1a1a;
+  --bg-soft: #1e1e1e;
+  --border: #333;
+  --fg: #e8e8e8;
+  --dim: #888;
+  --accent: #3cc;
+  --danger: #cc3333;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px ui-monospace, Menlo, monospace;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+header { flex: 0 0 auto; }
+main { flex: 1 1 auto; min-height: 0; }
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+header strong { font-size: 14px; }
+.dim { color: var(--dim); font-size: 11px; }
+
+#theme-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#theme-controls label { color: var(--dim); font-size: 11px; }
+#theme-controls select {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  font: inherit;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#theme-controls button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--dim);
+  font: inherit;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#theme-controls button:hover { color: var(--accent); border-color: var(--accent); }
+
+#save-indicator.saved { color: #7fb069; }
+#save-indicator.dirty { color: #f1c40f; }
+#save-indicator.error { color: var(--danger); }
+
+main {
+  display: grid;
+  grid-template-columns: 240px 1fr 360px;
+}
+
+#palette {
+  border-right: 1px solid var(--border);
+  padding: 12px;
+  background: #0a0a0a;
+  overflow-y: auto;
+}
+
+#middle {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#preview {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+  flex: 0 0 auto;
+}
+#preview .label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dim);
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+#preview-body {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+#inspector {
+  padding: 12px;
+  background: #0a0a0a;
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dim);
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.palette-group { margin-bottom: 16px; }
+.palette-item {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 12px;
+  cursor: grab;
+  margin-bottom: 4px;
+  user-select: none;
+}
+.palette-item:active { cursor: grabbing; }
+
+#canvas {
+  padding: 16px;
+  background: #111;
+  overflow-y: auto;
+  min-height: 0;
+}
+.line-row {
+  background: #1a1a1a;
+  border: 1px dashed #444;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+  min-height: 40px;
+  flex-wrap: wrap;
+}
+.line-row.drag-over { border-color: var(--accent); background: #1a2222; }
+.line-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.line-style-toggle {
+  background: transparent;
+  border: 1px solid #444;
+  color: var(--dim);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.line-delete {
+  background: transparent;
+  border: 1px solid #444;
+  color: var(--dim);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.line-delete:hover { color: var(--danger); border-color: var(--danger); }
+
+.element-chip {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.element-chip.selected { outline: 2px solid var(--accent); outline-offset: 2px; }
+.element-chip.plain {
+  background: #222;
+  color: #ccc;
+  border-radius: 4px;
+}
+
+#add-line {
+  display: block;
+  margin: 12px auto 0;
+  background: transparent;
+  border: 1px dashed #444;
+  color: var(--dim);
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: inherit;
+}
+#add-line:hover { color: var(--accent); border-color: var(--accent); }
+
+#inspector .field {
+  margin-bottom: 12px;
+}
+#inspector label {
+  display: block;
+  font-size: 11px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+#inspector input[type="color"] {
+  width: 100%;
+  height: 28px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0;
+  cursor: pointer;
+}
+#inspector input[type="text"],
+#inspector input[type="number"],
+#inspector select {
+  width: 100%;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 4px 6px;
+  border-radius: 3px;
+  font: inherit;
+  font-size: 11px;
+}
+
+#inspector .swatches {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  margin-top: 6px;
+}
+#inspector .swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0;
+  cursor: pointer;
+}
+#inspector .swatch:hover {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+#inspector .delete-element {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}

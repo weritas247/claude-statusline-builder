@@ -1,0 +1,4 @@
+#!/bin/bash
+# Launch the statusline builder UI on http://127.0.0.1:7890 (or $STATUSLINE_BUILDER_PORT)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+exec node "$SCRIPT_DIR/../statusline-builder/server.mjs"

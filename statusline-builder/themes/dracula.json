@@ -1,0 +1,18 @@
+{
+  "name": "Dracula",
+  "description": "Vivid pink, purple, and cyan on a dark slate",
+  "colors": {
+    "user":           { "bg": "#bd93f9", "fg": "#282a36" },
+    "folder":         { "bg": "#ff79c6", "fg": "#282a36" },
+    "git":            { "bg": "#50fa7b", "fg": "#282a36" },
+    "elapsed":        { "bg": "#8be9fd", "fg": "#282a36" },
+    "model":          { "bg": "#44475a", "fg": "#f8f8f2" },
+    "session-time":   { "bg": "#6272a4", "fg": "#f8f8f2" },
+    "question-count": { "bg": "#44475a", "fg": "#f8f8f2" },
+    "session-name":   { "bg": "#bd93f9", "fg": "#282a36" },
+    "agent":          { "bg": "#50fa7b", "fg": "#282a36" },
+    "vim-mode":       { "bg": "#ff5555", "fg": "#f8f8f2" },
+    "worktree":       { "bg": "#8be9fd", "fg": "#282a36" },
+    "output-style":   { "bg": "#ff79c6", "fg": "#282a36" }
+  }
+}

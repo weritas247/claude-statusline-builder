@@ -1,0 +1,18 @@
+{
+  "name": "Claude Brand",
+  "description": "Default warm orange + cream — matches the original bash statusline",
+  "colors": {
+    "user":           { "bg": "#8B73B9", "fg": "#ffffff" },
+    "folder":         { "bg": "#D97757", "fg": "#000000" },
+    "git":            { "bg": "#E8A88A", "fg": "#000000" },
+    "elapsed":        { "bg": "#4682B4", "fg": "#ffffff" },
+    "model":          { "bg": "#505050", "fg": "#ffffff" },
+    "session-time":   { "bg": "#646464", "fg": "#ffffff" },
+    "question-count": { "bg": "#787878", "fg": "#ffffff" },
+    "session-name":   { "bg": "#787878", "fg": "#ffffff" },
+    "agent":          { "bg": "#5a6e5a", "fg": "#ffffff" },
+    "vim-mode":       { "bg": "#6e5a5a", "fg": "#ffffff" },
+    "worktree":       { "bg": "#4682B4", "fg": "#ffffff" },
+    "output-style":   { "bg": "#646464", "fg": "#ffffff" }
+  }
+}

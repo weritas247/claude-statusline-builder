@@ -1,0 +1,18 @@
+{
+  "name": "Solarized Dark",
+  "description": "Ethan Schoonover's calm yellow/cyan/violet palette",
+  "colors": {
+    "user":           { "bg": "#268bd2", "fg": "#fdf6e3" },
+    "folder":         { "bg": "#b58900", "fg": "#002b36" },
+    "git":            { "bg": "#859900", "fg": "#002b36" },
+    "elapsed":        { "bg": "#2aa198", "fg": "#002b36" },
+    "model":          { "bg": "#073642", "fg": "#93a1a1" },
+    "session-time":   { "bg": "#586e75", "fg": "#fdf6e3" },
+    "question-count": { "bg": "#657b83", "fg": "#fdf6e3" },
+    "session-name":   { "bg": "#268bd2", "fg": "#fdf6e3" },
+    "agent":          { "bg": "#859900", "fg": "#002b36" },
+    "vim-mode":       { "bg": "#dc322f", "fg": "#fdf6e3" },
+    "worktree":       { "bg": "#6c71c4", "fg": "#fdf6e3" },
+    "output-style":   { "bg": "#d33682", "fg": "#fdf6e3" }
+  }
+}
